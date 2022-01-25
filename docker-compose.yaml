@@ -67,7 +67,15 @@ services:
     networks:
       - default
       - proxynet
-
+      
+  kafka_magic:
+    image: digitsy/kafka-magic
+    ports:
+      - "8080:80"
+    networks:
+      - default
+      - proxynet
+      
 networks:
   proxynet:
     name: pub_sub_network
